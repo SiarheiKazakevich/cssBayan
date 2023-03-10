@@ -1,0 +1,112 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+.accordionwraper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100vh;
+   
+}
+.accordion {
+   width: 800px;
+   height: auto;
+   border: 1px solid #a8a7a7;
+   border-radius: 3px;
+}
+.tab input,
+.tab-content {
+ display: none;
+}
+.wrapertitle{
+   font: 0.8rem/1.2 Arial, sans-serif;
+   color: #000;
+}
+.tab {
+    font: 0.8rem/1.2 Arial, sans-serif;
+   border: 2px solid #e9eaec;
+   border-width: 1px 0px 0px 0px;
+   border-radius: 3px;
+   color: #000;
+   margin-bottom: 1px;
+}
+
+.tab-title {
+   padding: 10px;
+   /* Поля вокруг текста */
+   display: block;
+   /* Блочный элемент */
+   text-transform: uppercase;
+   /* Все буквы заглавные */
+   font-weight: bold;
+   /* Жирное начертание */
+   cursor: pointer;
+   /* Вид курсора */
+}
+
+.tab-title::after {
+   content: '+';
+   /* Выводим плюс */
+   float: right;
+   /* Размещаем по правому краю */
+}
+
+.tab-content,
+.wrapertitle {
+   padding: 10px 20px;
+   /* Поля вокруг текста */
+}
+
+.tab :checked+.tab-title {
+    /*background-color: #f5762d;
+   Цвет фона */
+   border-radius: 3px 3px 0 0;
+   /* Скругляем уголки */
+   color: #599eec;
+   /* Цвет текста */
+}
+
+.tab :checked+.tab-title::after {
+   content: 'х';
+   /* Выводим минус */
+}
+
+.tab :checked~.tab-content {
+   display: block;
+   /* Показываем содержимое */
+}
+.foto1 {
+   background-image: url("./assets/img/fotoanimal1-pandas.png");
+   background-repeat: no-repeat;
+   width: 200px;
+   height: 200px;
+}
+.foto2 {
+   background-image: url("./assets/img/fotoanimal2-eagle.png");
+   background-repeat: no-repeat;
+   width: 200px;
+   height: 200px;
+}
+.foto3 {
+   background-image: url("./assets/img/fotoanimal3-gorilla.png");
+   background-repeat: no-repeat;
+   width: 200px;
+   height: 200px;
+}
+.foto4 {
+   background-image: url("./assets/img/fotoanimal4-lenivets.png");
+   background-repeat: no-repeat;
+   width: 200px;
+   height: 200px;
+}
+.foto5 {
+   background-image: url("./assets/img/fotoanimal5-gepardas.png");
+   background-repeat: no-repeat;
+   width: 200px;
+   height: 200px;
+}

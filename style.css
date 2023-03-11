@@ -9,6 +9,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   max-width: 1920px;
    width: 100%;
    height: 100vh;
    
@@ -32,7 +33,7 @@
    border: 2px solid #e9eaec;
    border-width: 1px 0px 0px 0px;
    border-radius: 3px;
-   color: #000;
+   color: #0f58f5;
    margin-bottom: 1px;
 }
 
@@ -67,19 +68,51 @@
    Цвет фона */
    border-radius: 3px 3px 0 0;
    /* Скругляем уголки */
-   color: #599eec;
+   color: #020911;
    /* Цвет текста */
 }
+
 
 .tab :checked+.tab-title::after {
    content: 'х';
    /* Выводим минус */
 }
+ 
+.tab:hover .tab-content {
+   display: block;
+   /*opacity: 1;*/
+   /* Показываем содержимое */
+   /*через display не получится плавно перейти,пробовать через opasity */
+   -webkit-transition: all 1s ease-out 0.5s;
+     -moz-transition: all 1s ease-out 0.5s;
+     -o-transition: all 1s ease-out 0.5s;
+     transition: all 1s ease-out 0.5s;
+     /*transition: all 8.5s ease 3s;*/
 
+}
 .tab :checked~.tab-content {
    display: block;
    /* Показываем содержимое */
+   /*opacity: 1;*/
 }
+
+/*нерабочие попытки --->
+.accordionwraper :hover  ~ .tab {
+   color: #020911;
+}
+.accordion :hover ~ .tab {
+   color: #020911;
+}
+.accordionwraper:hover~.tab {
+   color: #020911;
+}*/
+
+.tab:hover,
+ .accordion:hover .tab {
+   color: #020911;
+  /* меняем цвет всех элементов при наведении*/
+}
+
 .foto1 {
    background-image: url("./assets/img/fotoanimal1-pandas.png");
    background-repeat: no-repeat;
@@ -109,4 +142,45 @@
    background-repeat: no-repeat;
    width: 200px;
    height: 200px;
+}
+.boximg {
+   margin: 0px 0px 0px 37.5%;
+}
+
+
+/*------------адаптация 321-820--------------*/
+@media (min-width:321px)  and  (max-width: 820px) {
+   .accordionwraper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 1920px;
+      width: 100%;
+      height: 100vh;
+      
+   }
+   .accordion {
+      width: 65%;
+      height: auto;
+      border: 1px solid #a8a7a7;
+      border-radius: 3px;
+   }
+   .boximg {
+      margin: 0px 0px 0px 25%;
+   }
+}
+
+
+
+/*------------адаптация 320--------------*/
+@media (max-width: 320px) {
+   .accordion {
+      width: 85%;
+      height: auto;
+      border: 1px solid #a8a7a7;
+      border-radius: 3px;
+   }
+   .boximg {
+      margin: 0px 0px 0px 25%;
+   }
 }

@@ -9,16 +9,16 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   max-width: 1920px;
+   max-width: 120rem;
    width: 100%;
    height: 100vh;
    overflow-x: hidden;
 }
 .accordion {
-   width: 800px;
+   width: 50rem;
    height: auto;
-   border: 1px solid #a8a7a7;
-   border-radius: 3px;
+   border: 0.06rem solid #a8a7a7;
+   border-radius: 0.2rem;
 }
 .tab input,
 .tab-content {
@@ -29,48 +29,50 @@
    color: #000;
 }
 .tab {
-    font: 0.8rem/1.2 Arial, sans-serif;
-   border: 2px solid #e9eaec;
-   border-width: 1px 0px 0px 0px;
-   border-radius: 3px;
+   font: 0.8rem/1.2 Arial, sans-serif;
+   border: 0.12rem solid #e9eaec;
+   border-width: 0.06rem 0rem 0rem 0rem;
+   border-radius: 0.18rem;
    color: #0f58f5;
-   margin-bottom: 1px;
+   margin-bottom: 0.06rem;
 }
 
 .tab-title {
-   padding: 10px;
-   /* Поля вокруг текста */
-   display: block;
-   /* Блочный элемент */
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+
+   padding: 0.6rem;
+  /* display: block;*/
    text-transform: uppercase;
-   /* Все буквы заглавные */
    font-weight: bold;
-   /* Жирное начертание */
    cursor: pointer;
-   /* Вид курсора */
-   height: 35px;
+   height: 2.4rem;
 }
 
 .tab-title::after {
+   display: flex;
+   justify-content: flex-end;
+   align-items: start;
+   align-self: flex-start;
    content: '+';
-   /* Выводим плюс */
-   float: right;
+   /* margin: 0px 0px 150px 0px;
+  bottom: 15px;*/
+   /* Выводим плюс 
+   float: right;*/
    /* Размещаем по правому краю */
 }
 
 .tab-content,
 .wrapertitle {
-   padding: 10px 20px;
-   /* Поля вокруг текста */
+   padding: 0.6rem 1.3rem;
 }
 
 .tab :checked+.tab-title {
-    /*background-color: #f5762d;
-   Цвет фона */
-   border-radius: 3px 3px 0 0;
-   /* Скругляем уголки */
+    /*background-color: #f5762d;*/
+   border-radius: 0.18rem 0.18rem 0 0;
    color: #020911;
-   /* Цвет текста */
 }
 
 
@@ -116,29 +118,34 @@
 
 .foto1 {
    background-image: url("./assets/img/fotoanimal1-pandas.png");
+   background-size: contain;
    background-repeat: no-repeat;
 }
 .foto2 {
    background-image: url("./assets/img/fotoanimal2-eagle.png");
+   background-size: contain;
    background-repeat: no-repeat;
 }
 .foto3 {
    background-image: url("./assets/img/fotoanimal3-gorilla.png");
+   background-size: contain;
    background-repeat: no-repeat;
 }
 .foto4 {
    background-image: url("./assets/img/fotoanimal4-lenivets.png");
+   background-size: contain;
    background-repeat: no-repeat;
 }
 .foto5 {
    background-image: url("./assets/img/fotoanimal5-gepardas.png");
+   background-size: contain;
    background-repeat: no-repeat;
 }
 .boximg {
    position: relative;
-   width: 200px;
-   height: 200px;
-   margin: 0px 0px 0px 37.5%;
+   width: 12.5rem;
+   height: 12.5rem;
+   margin: 0rem 0rem 0rem 37.5%;
    transition: 1s;
 
 }
@@ -160,7 +167,7 @@
    text-align: center;
    vertical-align: middle;
    color: #fff;
-   padding-top: 80px;
+   padding-top: 5rem;
    opacity: 0;
    -webkit-transition: all .25s;
    -o-transition: all .25s;
@@ -169,10 +176,7 @@
 .tab-content div:hover .effect-blackblur {
    opacity: 1;
 }
-.tab-content div:hover .foto5 {
-   width: 220px;
-   height: 220px;
-}
+
 .tab,
 .boximg,
 .tab-content div {
@@ -190,13 +194,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      max-width: 1920px;
+      max-width: 51.3rem;
       width: 100%;
       height: 100vh;
       
    }
    .tab-title {
-      height: 50px;
+      height: 3.13rem;
    }
    .tab {
       font: 1rem/1.2 Arial, sans-serif
@@ -204,13 +208,13 @@
    .accordion {
       width: 65%;
       height: auto;
-      border: 1px solid #a8a7a7;
-      border-radius: 3px;
+      border: 0.06rem solid #a8a7a7;
+      border-radius: 0.18rem;
    }
    .boximg {
-      width: 175px;
-      height: 175px;
-      margin: 0px 0px 0px 10%;
+      width: 11rem;
+      height: 11rem;
+      margin: 0rem 0rem 0rem 10%;
    }
    /*.tab:not(.tab):hover .tab-content {
       display: block;*/
@@ -233,19 +237,19 @@
    .accordion {
       width: 85%;
       height: auto;
-      border: 1px solid #a8a7a7;
-      border-radius: 3px;
+      border: 0.06rem solid #a8a7a7;
+      border-radius: 0.18rem;
    }
      .tab-title {
-      height: 65px;
+      height: 4rem;
    }
    .tab {
       font: 1rem/1.2 Arial, sans-serif
    }
    .boximg {
-      width: 150px;
-      height: 150px;
-      margin: 0px 0px 0px 7%;
+      width: 9.4rem;
+      height: 9.4rem;
+      margin: 0rem 0rem 0rem 7%;
    }
    /*.tab:not(.tab):hover .tab-content {
       display: block;

@@ -52,16 +52,8 @@
 }
 
 .tab-title::after {
-   display: flex;
-   justify-content: flex-end;
-   align-items: start;
-   align-self: flex-start;
    content: '+';
-   /* margin: 0px 0px 150px 0px;
-  bottom: 15px;*/
-   /* Выводим плюс 
-   float: right;*/
-   /* Размещаем по правому краю */
+   /*float: right;*/
 }
 
 .tab-content,
